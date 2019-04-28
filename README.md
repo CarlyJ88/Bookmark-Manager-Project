@@ -22,3 +22,9 @@ CREATE DATABASE bookmark_manager;
 To set up the appropriate tables, connect to the database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order.
 
 To install the gem 'pg' you need to make sure you have at least bundler:2.0.1 installed before you run the bundle command.
+
+Also create a bookmark_maanger_test database for your testing environment following these commands:
+
+CREATE DATABASE "bookmark_manager_test";
+\c bookmark_manager_test
+CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
